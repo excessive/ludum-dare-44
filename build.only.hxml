@@ -1,0 +1,39 @@
+-cp src/backend/love/bindings
+-cp src
+
+-debug
+# -D release
+# -D save_debug
+# -D unstuck_protocols
+# -D profile
+# -D actor_debug
+# -D render_debug
+# -D skip_menu
+# -D extra_debug
+-D imgui
+-D analyzer
+-D lua-vanilla
+-dce full
+# --macro nullSafety("actor")
+--macro nullSafety("ai")
+--macro nullSafety("anim")
+--macro nullSafety("collision")
+--macro nullSafety("components")
+# --macro nullSafety("exui")
+--macro nullSafety("math")
+# --macro nullSafety("node")
+--macro nullSafety("player")
+# --macro nullSafety("render")
+# --macro nullSafety("systems")
+--macro nullSafety("ui")
+--macro nullSafety("utils")
+-resource src/render/shaders/debug.glsl@shader_debug
+-resource src/render/shaders/sky.glsl@shader_sky
+-resource src/render/shaders/post.glsl@shader_post
+-resource src/render/shaders/basic.glsl@shader_basic
+-resource src/render/shaders/terrain.glsl@shader_terrain
+-resource src/render/shaders/fxaa.glsl@shader_fxaa
+-resource src/render/shaders/shadow.glsl@shader_shadow
+
+-main Main
+-lua main.lua

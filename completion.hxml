@@ -1,0 +1,28 @@
+-D no-compilation
+-D luajit
+-D lua-ver=5.1
+-D desktop
+-D haxe_octree
+-D imgui
+-D analyzer
+
+-cp src
+-cp src/bindings
+-cp src/backend/love/bindings
+
+--macro nullSafety("utils")
+--macro nullSafety("ui")
+# --macro nullSafety("systems")
+# --macro nullSafety("render")
+# --macro nullSafety("node")
+--macro nullSafety("player")
+--macro nullSafety("math")
+# --macro nullSafety("exui")
+# --macro nullSafety("actor")
+--macro nullSafety("ai")
+--macro nullSafety("anim")
+--macro nullSafety("collision")
+--macro nullSafety("components")
+
+-main Main
+-lua main.lua

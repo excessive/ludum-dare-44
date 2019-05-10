@@ -1,0 +1,2 @@
+build.only.hxml
+-cmd "bin\love ."
